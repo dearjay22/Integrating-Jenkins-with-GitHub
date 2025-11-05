@@ -37,14 +37,16 @@ pipeline {
             cleanWs()
         }
         success {
-        mail to: 'testuvpce@gmail.com',
-             subject: "Jenkins Build PASSED: ${currentBuild.fullDisplayName}",
-             body: "Good news! The Jenkins build '${currentBuild.fullDisplayName}' passed.\nCheck details at: ${env.BUILD_URL}"
+            mail to: 'testuvpce@gmail.com',
+            from: 'testuvpce@gmail.com',
+            subject: "Jenkins Build PASSED: ${currentBuild.fullDisplayName}",
+            body: "Good news! The Jenkins build '${currentBuild.fullDisplayName}' passed.\nCheck details at: ${env.BUILD_URL}"
         }
         failure {
             mail to: 'testuvpce@gmail.com',
-                subject: "Jenkins Build FAILED: ${currentBuild.fullDisplayName}",
-                body: "Attention! The Jenkins build '${currentBuild.fullDisplayName}' failed.\nCheck logs at: ${env.BUILD_URL}"
+            from: 'testuvpce@gmail.com',
+            subject: "Jenkins Build FAILED: ${currentBuild.fullDisplayName}",
+            body: "Attention! The Jenkins build '${currentBuild.fullDisplayName}' failed.\nCheck logs at: ${env.BUILD_URL}"
         }
     }
 }
