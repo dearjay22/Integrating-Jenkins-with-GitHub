@@ -1,0 +1,20 @@
+{
+  "name": "Integrating-Jenkins-with-GitHub",
+  "version": "1.0.0",
+  "description": "Sample Node.js app for Integrating-Jenkins-with-GitHub.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest --runInBand",
+    "lint": "node -e \"console.log('no linter configured')\""
+  },
+  "author": "Jay Patel",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^6.3.0"
+  }
+}
